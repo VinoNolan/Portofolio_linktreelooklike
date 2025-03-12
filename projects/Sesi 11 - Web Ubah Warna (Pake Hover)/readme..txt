@@ -1,0 +1,1 @@
+Terdapat ilmu logika pemrograman ForEach yang sangat penting dan ilmu soal mengambil data dari computedStye

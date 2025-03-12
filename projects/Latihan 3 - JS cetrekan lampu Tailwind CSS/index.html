@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CETREKAN LAMPU</title>
+    <link
+      href="https://unpkg.com/tailwindcss@^1/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="assets/images/on.png" type="image/x-icon" style="height: auto;" />
+  </head>
+  <body>
+    <div class="bg-gray-600 min-h-screen flex justify-center items-center">
+      <div class="grid grid-cols-2 gap-6">
+        <!-- ? RUANG KELUARGA -->
+        <div class="grid gap-4">
+          <p class="text-center text-2xl font-semibold text-gray-300">
+            Ruang Keluarga
+          </p>
+          <!-- Toggle -->
+          <label class="switch">
+            <span class="sun"
+              ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <g fill="#ffd43b">
+                  <circle r="5" cy="12" cx="12"></circle>
+                  <path
+                    d="m21 13h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm-17 0h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm13.66-5.66a1 1 0 0 1 -.66-.29 1 1 0 0 1 0-1.41l.71-.71a1 1 0 1 1 1.41 1.41l-.71.71a1 1 0 0 1 -.75.29zm-12.02 12.02a1 1 0 0 1 -.71-.29 1 1 0 0 1 0-1.41l.71-.66a1 1 0 0 1 1.41 1.41l-.71.71a1 1 0 0 1 -.7.24zm6.36-14.36a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm0 17a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm-5.66-14.66a1 1 0 0 1 -.7-.29l-.71-.71a1 1 0 0 1 1.41-1.41l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.29zm12.02 12.02a1 1 0 0 1 -.7-.29l-.66-.71a1 1 0 0 1 1.36-1.36l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.24z"
+                  ></path>
+                </g></svg
+            ></span>
+            <span class="moon"
+              ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                <path
+                  d="m223.5 32c-123.5 0-223.5 100.3-223.5 224s100 224 223.5 224c60.6 0 115.5-24.2 155.8-63.4 5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6-96.9 0-175.5-78.8-175.5-176 0-65.8 36-123.1 89.3-153.3 6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"
+                ></path></svg
+            ></span>
+            <input
+              type="checkbox"
+              class="input"
+              onchange="saklar_utama()"
+              id="togglekeluarga"
+            />
+            <span class="slider"></span>
+          </label>
+          <!-- Toggle End -->
+          <div class="flex justify-center items-end bg-purple-700 p-5 rounded-2xl">
+            <!-- LAMPU 1 -->
+            <img
+              src="assets/images/on.png"
+              alt="lampu off"
+              id="lampu1_kel"
+              class="h-20"
+            />
+            <!-- Toggle -->
+            <label class="switch">
+              <span class="sun"
+                ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <g fill="#ffd43b">
+                    <circle r="5" cy="12" cx="12"></circle>
+                    <path
+                      d="m21 13h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm-17 0h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm13.66-5.66a1 1 0 0 1 -.66-.29 1 1 0 0 1 0-1.41l.71-.71a1 1 0 1 1 1.41 1.41l-.71.71a1 1 0 0 1 -.75.29zm-12.02 12.02a1 1 0 0 1 -.71-.29 1 1 0 0 1 0-1.41l.71-.66a1 1 0 0 1 1.41 1.41l-.71.71a1 1 0 0 1 -.7.24zm6.36-14.36a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm0 17a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm-5.66-14.66a1 1 0 0 1 -.7-.29l-.71-.71a1 1 0 0 1 1.41-1.41l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.29zm12.02 12.02a1 1 0 0 1 -.7-.29l-.66-.71a1 1 0 0 1 1.36-1.36l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.24z"
+                    ></path>
+                  </g></svg
+              ></span>
+              <span class="moon"
+                ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                  <path
+                    d="m223.5 32c-123.5 0-223.5 100.3-223.5 224s100 224 223.5 224c60.6 0 115.5-24.2 155.8-63.4 5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6-96.9 0-175.5-78.8-175.5-176 0-65.8 36-123.1 89.3-153.3 6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"
+                  ></path></svg
+              ></span>
+              <input
+                type="checkbox"
+                class="input"
+                onchange="saklar_satuan()"
+                id="toggle1_kel"
+              />
+              <span class="slider"></span>
+            </label>
+            <!-- LAMPU 1 END -->
+
+            <!-- LAMPU 2 -->
+            <img
+              src="assets/images/on.png"
+              alt="lampu off"
+              id="lampu2_kel"
+              class="h-20"
+            />
+            <!-- Toggle -->
+            <label class="switch">
+              <span class="sun"
+                ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <g fill="#ffd43b">
+                    <circle r="5" cy="12" cx="12"></circle>
+                    <path
+                      d="m21 13h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm-17 0h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm13.66-5.66a1 1 0 0 1 -.66-.29 1 1 0 0 1 0-1.41l.71-.71a1 1 0 1 1 1.41 1.41l-.71.71a1 1 0 0 1 -.75.29zm-12.02 12.02a1 1 0 0 1 -.71-.29 1 1 0 0 1 0-1.41l.71-.66a1 1 0 0 1 1.41 1.41l-.71.71a1 1 0 0 1 -.7.24zm6.36-14.36a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm0 17a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm-5.66-14.66a1 1 0 0 1 -.7-.29l-.71-.71a1 1 0 0 1 1.41-1.41l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.29zm12.02 12.02a1 1 0 0 1 -.7-.29l-.66-.71a1 1 0 0 1 1.36-1.36l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.24z"
+                    ></path>
+                  </g></svg
+              ></span>
+              <span class="moon"
+                ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                  <path
+                    d="m223.5 32c-123.5 0-223.5 100.3-223.5 224s100 224 223.5 224c60.6 0 115.5-24.2 155.8-63.4 5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6-96.9 0-175.5-78.8-175.5-176 0-65.8 36-123.1 89.3-153.3 6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"
+                  ></path></svg
+              ></span>
+              <input
+                type="checkbox"
+                class="input"
+                onchange="saklar_satuan()"
+                id="toggle2_kel"
+              />
+              <span class="slider"></span>
+            </label>
+            <!-- LAMPU 2 END -->
+
+            <!-- LAMPU 3  -->
+            <img
+              src="assets/images/on.png"
+              alt="lampu off"
+              id="lampu3_kel"
+              class="h-20"
+            />
+            <!-- Toggle -->
+            <label class="switch">
+              <span class="sun"
+                ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <g fill="#ffd43b">
+                    <circle r="5" cy="12" cx="12"></circle>
+                    <path
+                      d="m21 13h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm-17 0h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm13.66-5.66a1 1 0 0 1 -.66-.29 1 1 0 0 1 0-1.41l.71-.71a1 1 0 1 1 1.41 1.41l-.71.71a1 1 0 0 1 -.75.29zm-12.02 12.02a1 1 0 0 1 -.71-.29 1 1 0 0 1 0-1.41l.71-.66a1 1 0 0 1 1.41 1.41l-.71.71a1 1 0 0 1 -.7.24zm6.36-14.36a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm0 17a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm-5.66-14.66a1 1 0 0 1 -.7-.29l-.71-.71a1 1 0 0 1 1.41-1.41l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.29zm12.02 12.02a1 1 0 0 1 -.7-.29l-.66-.71a1 1 0 0 1 1.36-1.36l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.24z"
+                    ></path>
+                  </g></svg
+              ></span>
+              <span class="moon"
+                ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                  <path
+                    d="m223.5 32c-123.5 0-223.5 100.3-223.5 224s100 224 223.5 224c60.6 0 115.5-24.2 155.8-63.4 5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6-96.9 0-175.5-78.8-175.5-176 0-65.8 36-123.1 89.3-153.3 6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"
+                  ></path></svg
+              ></span>
+              <input
+                type="checkbox"
+                class="input"
+                onchange="saklar_satuan()"
+                id="toggle3_kel"
+              />
+              <span class="slider"></span>
+            </label>
+            <!-- LAMPU 3 END -->
+          </div>
+        </div>
+        <!-- ? RUANG KELUARGA END-->
+
+        <!-- ? RUANG MAKAN -->
+        <div class="grid gap-4">
+          <p class="text-center text-2xl font-semibold text-gray-300">
+            Ruang Makan
+          </p>
+          <!-- Toggle -->
+          <label class="switch">
+            <span class="sun"
+              ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <g fill="#ffd43b">
+                  <circle r="5" cy="12" cx="12"></circle>
+                  <path
+                    d="m21 13h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm-17 0h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm13.66-5.66a1 1 0 0 1 -.66-.29 1 1 0 0 1 0-1.41l.71-.71a1 1 0 1 1 1.41 1.41l-.71.71a1 1 0 0 1 -.75.29zm-12.02 12.02a1 1 0 0 1 -.71-.29 1 1 0 0 1 0-1.41l.71-.66a1 1 0 0 1 1.41 1.41l-.71.71a1 1 0 0 1 -.7.24zm6.36-14.36a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm0 17a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm-5.66-14.66a1 1 0 0 1 -.7-.29l-.71-.71a1 1 0 0 1 1.41-1.41l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.29zm12.02 12.02a1 1 0 0 1 -.7-.29l-.66-.71a1 1 0 0 1 1.36-1.36l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.24z"
+                  ></path>
+                </g></svg
+            ></span>
+            <span class="moon"
+              ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                <path
+                  d="m223.5 32c-123.5 0-223.5 100.3-223.5 224s100 224 223.5 224c60.6 0 115.5-24.2 155.8-63.4 5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6-96.9 0-175.5-78.8-175.5-176 0-65.8 36-123.1 89.3-153.3 6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"
+                ></path></svg
+            ></span>
+            <input
+              type="checkbox"
+              class="input"
+              onchange="saklar_utama()"
+              id="togglemakan"
+            />
+            <span class="slider"></span>
+          </label>
+          <!-- Toggle End -->
+          <div class="flex items-end bg-purple-700 p-5 rounded-2xl justify-center">
+            <!-- LAMPU 1 -->
+            <img
+              src="assets/images/on.png"
+              alt="lampu off"
+              id="lampu1_mak"
+              class="h-20"
+            />
+            <!-- Toggle -->
+            <label class="switch">
+              <span class="sun"
+                ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <g fill="#ffd43b">
+                    <circle r="5" cy="12" cx="12"></circle>
+                    <path
+                      d="m21 13h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm-17 0h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm13.66-5.66a1 1 0 0 1 -.66-.29 1 1 0 0 1 0-1.41l.71-.71a1 1 0 1 1 1.41 1.41l-.71.71a1 1 0 0 1 -.75.29zm-12.02 12.02a1 1 0 0 1 -.71-.29 1 1 0 0 1 0-1.41l.71-.66a1 1 0 0 1 1.41 1.41l-.71.71a1 1 0 0 1 -.7.24zm6.36-14.36a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm0 17a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm-5.66-14.66a1 1 0 0 1 -.7-.29l-.71-.71a1 1 0 0 1 1.41-1.41l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.29zm12.02 12.02a1 1 0 0 1 -.7-.29l-.66-.71a1 1 0 0 1 1.36-1.36l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.24z"
+                    ></path>
+                  </g></svg
+              ></span>
+              <span class="moon"
+                ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                  <path
+                    d="m223.5 32c-123.5 0-223.5 100.3-223.5 224s100 224 223.5 224c60.6 0 115.5-24.2 155.8-63.4 5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6-96.9 0-175.5-78.8-175.5-176 0-65.8 36-123.1 89.3-153.3 6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"
+                  ></path></svg
+              ></span>
+              <input
+                type="checkbox"
+                class="input"
+                onchange="saklar_satuan()"
+                id="toggle1_mak"
+              />
+              <span class="slider"></span>
+            </label>
+            <!-- LAMPU 1 END -->
+          </div>
+        </div>
+        <!-- ? RUANG MAKAN END-->
+
+        <!-- ? RUANG TIDUR -->
+        <div class="grid gap-4">
+          <p class="text-center text-2xl font-semibold text-gray-300">
+            Ruang Tidur
+          </p>
+          <!-- Toggle -->
+          <label class="switch">
+            <span class="sun"
+              ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <g fill="#ffd43b">
+                  <circle r="5" cy="12" cx="12"></circle>
+                  <path
+                    d="m21 13h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm-17 0h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm13.66-5.66a1 1 0 0 1 -.66-.29 1 1 0 0 1 0-1.41l.71-.71a1 1 0 1 1 1.41 1.41l-.71.71a1 1 0 0 1 -.75.29zm-12.02 12.02a1 1 0 0 1 -.71-.29 1 1 0 0 1 0-1.41l.71-.66a1 1 0 0 1 1.41 1.41l-.71.71a1 1 0 0 1 -.7.24zm6.36-14.36a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm0 17a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm-5.66-14.66a1 1 0 0 1 -.7-.29l-.71-.71a1 1 0 0 1 1.41-1.41l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.29zm12.02 12.02a1 1 0 0 1 -.7-.29l-.66-.71a1 1 0 0 1 1.36-1.36l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.24z"
+                  ></path>
+                </g></svg
+            ></span>
+            <span class="moon"
+              ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                <path
+                  d="m223.5 32c-123.5 0-223.5 100.3-223.5 224s100 224 223.5 224c60.6 0 115.5-24.2 155.8-63.4 5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6-96.9 0-175.5-78.8-175.5-176 0-65.8 36-123.1 89.3-153.3 6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"
+                ></path></svg
+            ></span>
+            <input
+              type="checkbox"
+              class="input"
+              onchange="saklar_utama()"
+              id="toggletidur"
+            />
+            <span class="slider"></span>
+          </label>
+          <!-- Toggle End -->
+          <div class="flex items-end bg-purple-700 p-5 rounded-2xl justify-center">
+            <!-- LAMPU 1 -->
+            <img
+              src="assets/images/on.png"
+              alt="lampu off"
+              id="lampu1_tdr"
+              class="h-20"
+            />
+            <!-- Toggle -->
+            <label class="switch">
+              <span class="sun"
+                ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <g fill="#ffd43b">
+                    <circle r="5" cy="12" cx="12"></circle>
+                    <path
+                      d="m21 13h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm-17 0h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm13.66-5.66a1 1 0 0 1 -.66-.29 1 1 0 0 1 0-1.41l.71-.71a1 1 0 1 1 1.41 1.41l-.71.71a1 1 0 0 1 -.75.29zm-12.02 12.02a1 1 0 0 1 -.71-.29 1 1 0 0 1 0-1.41l.71-.66a1 1 0 0 1 1.41 1.41l-.71.71a1 1 0 0 1 -.7.24zm6.36-14.36a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm0 17a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm-5.66-14.66a1 1 0 0 1 -.7-.29l-.71-.71a1 1 0 0 1 1.41-1.41l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.29zm12.02 12.02a1 1 0 0 1 -.7-.29l-.66-.71a1 1 0 0 1 1.36-1.36l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.24z"
+                    ></path>
+                  </g></svg
+              ></span>
+              <span class="moon"
+                ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                  <path
+                    d="m223.5 32c-123.5 0-223.5 100.3-223.5 224s100 224 223.5 224c60.6 0 115.5-24.2 155.8-63.4 5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6-96.9 0-175.5-78.8-175.5-176 0-65.8 36-123.1 89.3-153.3 6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"
+                  ></path></svg
+              ></span>
+              <input
+                type="checkbox"
+                class="input"
+                onchange="saklar_satuan()"
+                id="toggle1_tdr"
+              />
+              <span class="slider"></span>
+            </label>
+            <!-- LAMPU 1 END -->
+
+            <!-- LAMPU 2 -->
+            <img
+              src="assets/images/on.png"
+              alt="lampu off"
+              id="lampu2_tdr"
+              class="h-20"
+            />
+            <!-- Toggle -->
+            <label class="switch">
+              <span class="sun"
+                ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <g fill="#ffd43b">
+                    <circle r="5" cy="12" cx="12"></circle>
+                    <path
+                      d="m21 13h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm-17 0h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm13.66-5.66a1 1 0 0 1 -.66-.29 1 1 0 0 1 0-1.41l.71-.71a1 1 0 1 1 1.41 1.41l-.71.71a1 1 0 0 1 -.75.29zm-12.02 12.02a1 1 0 0 1 -.71-.29 1 1 0 0 1 0-1.41l.71-.66a1 1 0 0 1 1.41 1.41l-.71.71a1 1 0 0 1 -.7.24zm6.36-14.36a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm0 17a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm-5.66-14.66a1 1 0 0 1 -.7-.29l-.71-.71a1 1 0 0 1 1.41-1.41l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.29zm12.02 12.02a1 1 0 0 1 -.7-.29l-.66-.71a1 1 0 0 1 1.36-1.36l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.24z"
+                    ></path>
+                  </g></svg
+              ></span>
+              <span class="moon"
+                ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                  <path
+                    d="m223.5 32c-123.5 0-223.5 100.3-223.5 224s100 224 223.5 224c60.6 0 115.5-24.2 155.8-63.4 5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6-96.9 0-175.5-78.8-175.5-176 0-65.8 36-123.1 89.3-153.3 6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"
+                  ></path></svg
+              ></span>
+              <input
+                type="checkbox"
+                class="input"
+                onchange="saklar_satuan()"
+                id="toggle2_tdr"
+              />
+              <span class="slider"></span>
+            </label>
+            <!-- LAMPU 2 END -->
+          </div>
+        </div>
+        <!-- ? RUANG TIDUR END-->
+
+        <!-- ? RUANG TAMU -->
+        <div class="grid gap-4">
+          <p class="text-center text-2xl font-semibold text-gray-300">
+            Ruang Tamu
+          </p>
+          <!-- Toggle -->
+          <label class="switch">
+            <span class="sun"
+              ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <g fill="#ffd43b">
+                  <circle r="5" cy="12" cx="12"></circle>
+                  <path
+                    d="m21 13h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm-17 0h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm13.66-5.66a1 1 0 0 1 -.66-.29 1 1 0 0 1 0-1.41l.71-.71a1 1 0 1 1 1.41 1.41l-.71.71a1 1 0 0 1 -.75.29zm-12.02 12.02a1 1 0 0 1 -.71-.29 1 1 0 0 1 0-1.41l.71-.66a1 1 0 0 1 1.41 1.41l-.71.71a1 1 0 0 1 -.7.24zm6.36-14.36a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm0 17a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm-5.66-14.66a1 1 0 0 1 -.7-.29l-.71-.71a1 1 0 0 1 1.41-1.41l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.29zm12.02 12.02a1 1 0 0 1 -.7-.29l-.66-.71a1 1 0 0 1 1.36-1.36l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.24z"
+                  ></path>
+                </g></svg
+            ></span>
+            <span class="moon"
+              ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                <path
+                  d="m223.5 32c-123.5 0-223.5 100.3-223.5 224s100 224 223.5 224c60.6 0 115.5-24.2 155.8-63.4 5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6-96.9 0-175.5-78.8-175.5-176 0-65.8 36-123.1 89.3-153.3 6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"
+                ></path></svg
+            ></span>
+            <input
+              type="checkbox"
+              class="input"
+              onchange="saklar_utama()"
+              id="toggletamu"
+            />
+            <span class="slider"></span>
+          </label>
+          <!-- Toggle End -->
+          <div class="flex justify-center items-end bg-purple-700 p-5 rounded-2xl">
+            <!-- LAMPU 1 -->
+            <img
+              src="assets/images/on.png"
+              alt="lampu off"
+              id="lampu1_tam"
+              class="h-20"
+            />
+            <!-- Toggle -->
+            <label class="switch">
+              <span class="sun"
+                ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <g fill="#ffd43b">
+                    <circle r="5" cy="12" cx="12"></circle>
+                    <path
+                      d="m21 13h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm-17 0h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm13.66-5.66a1 1 0 0 1 -.66-.29 1 1 0 0 1 0-1.41l.71-.71a1 1 0 1 1 1.41 1.41l-.71.71a1 1 0 0 1 -.75.29zm-12.02 12.02a1 1 0 0 1 -.71-.29 1 1 0 0 1 0-1.41l.71-.66a1 1 0 0 1 1.41 1.41l-.71.71a1 1 0 0 1 -.7.24zm6.36-14.36a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm0 17a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm-5.66-14.66a1 1 0 0 1 -.7-.29l-.71-.71a1 1 0 0 1 1.41-1.41l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.29zm12.02 12.02a1 1 0 0 1 -.7-.29l-.66-.71a1 1 0 0 1 1.36-1.36l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.24z"
+                    ></path>
+                  </g></svg
+              ></span>
+              <span class="moon"
+                ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                  <path
+                    d="m223.5 32c-123.5 0-223.5 100.3-223.5 224s100 224 223.5 224c60.6 0 115.5-24.2 155.8-63.4 5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6-96.9 0-175.5-78.8-175.5-176 0-65.8 36-123.1 89.3-153.3 6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"
+                  ></path></svg
+              ></span>
+              <input
+                type="checkbox"
+                class="input"
+                onchange="saklar_satuan()"
+                id="toggle1_tam"
+              />
+              <span class="slider"></span>
+            </label>
+            <!-- LAMPU 1 END -->
+
+            <!-- LAMPU 2 -->
+            <img
+              src="assets/images/on.png"
+              alt="lampu off"
+              id="lampu2_tam"
+              class="h-20"
+            />
+            <!-- Toggle -->
+            <label class="switch">
+              <span class="sun"
+                ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <g fill="#ffd43b">
+                    <circle r="5" cy="12" cx="12"></circle>
+                    <path
+                      d="m21 13h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm-17 0h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm13.66-5.66a1 1 0 0 1 -.66-.29 1 1 0 0 1 0-1.41l.71-.71a1 1 0 1 1 1.41 1.41l-.71.71a1 1 0 0 1 -.75.29zm-12.02 12.02a1 1 0 0 1 -.71-.29 1 1 0 0 1 0-1.41l.71-.66a1 1 0 0 1 1.41 1.41l-.71.71a1 1 0 0 1 -.7.24zm6.36-14.36a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm0 17a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm-5.66-14.66a1 1 0 0 1 -.7-.29l-.71-.71a1 1 0 0 1 1.41-1.41l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.29zm12.02 12.02a1 1 0 0 1 -.7-.29l-.66-.71a1 1 0 0 1 1.36-1.36l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.24z"
+                    ></path>
+                  </g></svg
+              ></span>
+              <span class="moon"
+                ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                  <path
+                    d="m223.5 32c-123.5 0-223.5 100.3-223.5 224s100 224 223.5 224c60.6 0 115.5-24.2 155.8-63.4 5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6-96.9 0-175.5-78.8-175.5-176 0-65.8 36-123.1 89.3-153.3 6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"
+                  ></path></svg
+              ></span>
+              <input
+                type="checkbox"
+                class="input"
+                onchange="saklar_satuan()"
+                id="toggle2_tam"
+              />
+              <span class="slider"></span>
+            </label>
+            <!-- LAMPU 2 END -->
+
+            <!-- LAMPU 3  -->
+            <img
+              src="assets/images/on.png"
+              alt="lampu off"
+              id="lampu3_tam"
+              class="h-20"
+            />
+            <!-- Toggle -->
+            <label class="switch">
+              <span class="sun"
+                ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <g fill="#ffd43b">
+                    <circle r="5" cy="12" cx="12"></circle>
+                    <path
+                      d="m21 13h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm-17 0h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm13.66-5.66a1 1 0 0 1 -.66-.29 1 1 0 0 1 0-1.41l.71-.71a1 1 0 1 1 1.41 1.41l-.71.71a1 1 0 0 1 -.75.29zm-12.02 12.02a1 1 0 0 1 -.71-.29 1 1 0 0 1 0-1.41l.71-.66a1 1 0 0 1 1.41 1.41l-.71.71a1 1 0 0 1 -.7.24zm6.36-14.36a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm0 17a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm-5.66-14.66a1 1 0 0 1 -.7-.29l-.71-.71a1 1 0 0 1 1.41-1.41l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.29zm12.02 12.02a1 1 0 0 1 -.7-.29l-.66-.71a1 1 0 0 1 1.36-1.36l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.24z"
+                    ></path>
+                  </g></svg
+              ></span>
+              <span class="moon"
+                ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                  <path
+                    d="m223.5 32c-123.5 0-223.5 100.3-223.5 224s100 224 223.5 224c60.6 0 115.5-24.2 155.8-63.4 5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6-96.9 0-175.5-78.8-175.5-176 0-65.8 36-123.1 89.3-153.3 6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"
+                  ></path></svg
+              ></span>
+              <input
+                type="checkbox"
+                class="input"
+                onchange="saklar_satuan()"
+                id="toggle3_tam"
+              />
+              <span class="slider"></span>
+            </label>
+            <!-- LAMPU 3 END -->
+
+            <!-- LAMPU 4  -->
+            <img
+              src="assets/images/on.png"
+              alt="lampu off"
+              id="lampu4_tam"
+              class="h-20"
+            />
+            <!-- Toggle -->
+            <label class="switch">
+              <span class="sun"
+                ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <g fill="#ffd43b">
+                    <circle r="5" cy="12" cx="12"></circle>
+                    <path
+                      d="m21 13h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm-17 0h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm13.66-5.66a1 1 0 0 1 -.66-.29 1 1 0 0 1 0-1.41l.71-.71a1 1 0 1 1 1.41 1.41l-.71.71a1 1 0 0 1 -.75.29zm-12.02 12.02a1 1 0 0 1 -.71-.29 1 1 0 0 1 0-1.41l.71-.66a1 1 0 0 1 1.41 1.41l-.71.71a1 1 0 0 1 -.7.24zm6.36-14.36a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm0 17a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm-5.66-14.66a1 1 0 0 1 -.7-.29l-.71-.71a1 1 0 0 1 1.41-1.41l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.29zm12.02 12.02a1 1 0 0 1 -.7-.29l-.66-.71a1 1 0 0 1 1.36-1.36l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.24z"
+                    ></path>
+                  </g></svg
+              ></span>
+              <span class="moon"
+                ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                  <path
+                    d="m223.5 32c-123.5 0-223.5 100.3-223.5 224s100 224 223.5 224c60.6 0 115.5-24.2 155.8-63.4 5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6-96.9 0-175.5-78.8-175.5-176 0-65.8 36-123.1 89.3-153.3 6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"
+                  ></path></svg
+              ></span>
+              <input
+                type="checkbox"
+                class="input"
+                onchange="saklar_satuan()"
+                id="toggle4_tam"
+              />
+              <span class="slider"></span>
+            </label>
+            <!-- LAMPU 4 END -->
+          </div>
+        </div>
+        <!-- ? RUANG TAMU END-->
+
+      </div>
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script src="logic.js"></script>
+    <script
+      defer
+      src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+  </body>
+</html>
